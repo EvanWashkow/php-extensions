@@ -57,13 +57,8 @@ class Cache extends Cache\_Cache
         // Variables
         $value = $defaultValue;
         
-        // No key specified: return entire cache.
-        if ( !isset( $key )) {
-            $value = $this->cache;
-        }
-        
         // Retrieve value from key
-        elseif ( $this->isSet( $key )) {
+        if ( $this->isSet( $key )) {
             $key   = self::sanitizeKey( $key );
             $value = $this->cache[ $key ];
         }
