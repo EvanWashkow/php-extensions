@@ -29,7 +29,7 @@ abstract class _Cache
      * Remove an item from the cache
      *
      * @param int|string $key Key the value is stored at
-     * @return mixed Sanitized key. NULL on failure.
+     * @return mixed Sanitized key. Null on failure.
      */
     abstract public function delete( $key );
     
@@ -49,7 +49,7 @@ abstract class _Cache
      *
      * @param int|string $key   Key to store the value at
      * @param mixed      $value The value to store
-     * @return int|string Sanitized key. NULL on failure.
+     * @return int|string Sanitized key. Null on failure.
      */
     abstract public function set( $key, $value );
     
@@ -61,7 +61,7 @@ abstract class _Cache
     /**
      * Is the cache key set?
      *
-     * Does not check to see if $value is NULL: NULL is considered valid.
+     * Does not check to see if $value is null: null is considered valid.
      *
      * @param int|string $key Key to store the value at
      * @return bool

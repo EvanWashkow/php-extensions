@@ -46,7 +46,7 @@ class Cache extends Cache\_Cache
             unset( $this->cache[ $key ] );
         }
         else {
-            $key = NULL;
+            $key = null;
         }
         return $key;
     }
@@ -114,7 +114,7 @@ class Cache extends Cache\_Cache
      * Sanitize the cache key
      *
      * @param mixed $key The cache key
-     * @return mixed NULL will be returned if invalid
+     * @return mixed Null will be returned if invalid
      */
     final protected static function sanitizeKey( $key )
     {
@@ -130,13 +130,13 @@ class Cache extends Cache\_Cache
                 $key = 0;
             }
             elseif ( '' == $key ) {
-                $key = NULL;
+                $key = null;
             }
         }
         
         // Set key as invalid
         elseif ( 'integer' != $type ) {
-            $key = NULL;
+            $key = null;
         }
         
         return $key;
