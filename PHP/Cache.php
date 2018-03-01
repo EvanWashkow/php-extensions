@@ -31,15 +31,6 @@ class Cache extends Cache\_Cache
     *                             CACHE OPERATIONS
     ***************************************************************************/
     
-    final public function add( $key, $value )
-    {
-        $key = self::sanitizeKey( $key );
-        if ( !$this->isSet( $key )) {
-            $key = $this->update( $key, $value );
-        }
-        return $key;
-    }
-    
     
     final public function clear()
     {
@@ -81,7 +72,7 @@ class Cache extends Cache\_Cache
     }
     
     
-    final public function update( $key, $value )
+    final public function set( $key, $value )
     {
         $key = self::sanitizeKey( $key );
         if ( isset( $key )) {

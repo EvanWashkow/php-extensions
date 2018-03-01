@@ -16,15 +16,6 @@ abstract class _Cache
     *                             CACHE OPERATIONS
     ***************************************************************************/
     
-    /**
-     * Add cached value; fails if key already exists
-     *
-     * @param int|string $key   Key to store the value at
-     * @param mixed      $value The value to store
-     * @return int|string Sanitized key. NULL on failure.
-     */
-    abstract public function add( $key, $value );
-    
     
     /**
      * Clear the cache
@@ -53,13 +44,13 @@ abstract class _Cache
     
     
     /**
-     * Add or replace cached value
+     * Cache a value
      *
      * @param int|string $key   Key to store the value at
      * @param mixed      $value The value to store
      * @return int|string Sanitized key. NULL on failure.
      */
-    abstract public function update( $key, $value );
+    abstract public function set( $key, $value );
     
     
     /***************************************************************************
