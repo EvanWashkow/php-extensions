@@ -23,7 +23,7 @@ class Cache extends Cache\_Cache
     
     final public function __construct()
     {
-        $this->cache = [];
+        $this->clear();
     }
     
     
