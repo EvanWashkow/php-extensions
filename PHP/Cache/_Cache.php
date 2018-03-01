@@ -37,10 +37,11 @@ abstract class _Cache
     /**
      * Retrieve cached value(s)
      *
-     * @param int|string $key Key the value is stored at
+     * @param int|string $key          Key the value is stored at
+     * @param mixed      $defaultValue Value to return if the key is not set
      * @return mixed
      */
-    abstract public function get( $key );
+    abstract public function get( $key, $defaultValue = null );
     
     
     /**

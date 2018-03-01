@@ -52,10 +52,10 @@ class Cache extends Cache\_Cache
     }
     
     
-    final public function get( $key )
+    final public function get( $key, $defaultValue = null )
     {
         // Variables
-        $value = NULL;
+        $value = $defaultValue;
         
         // No key specified: return entire cache.
         if ( !isset( $key )) {
