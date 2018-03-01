@@ -38,9 +38,9 @@ abstract class _Cache
      * Retrieve cached value(s)
      *
      * @param int|string $key Key the value is stored at
-     * @return mixed Array if $key is NULL
+     * @return mixed
      */
-    abstract public function get( $key = NULL );
+    abstract public function get( $key );
     
     
     /**

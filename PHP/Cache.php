@@ -52,7 +52,7 @@ class Cache extends Cache\_Cache
     }
     
     
-    final public function get( $key = NULL )
+    final public function get( $key )
     {
         // Variables
         $value = NULL;
